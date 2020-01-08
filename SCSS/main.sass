@@ -1,0 +1,25 @@
+  
+/* Import the mixins collection file... */
+@import SASS-MIXINS
+.header
+    +center(100%, 0 auto)
+    .container
+        +center(80%, 0 auto)
+        +fullFlex(flex,row,space-between)
+        .logo
+            flex-grow: 2
+        .menu
+            flex-grow: 1
+            +fullFlex(flex,row,space-between)
+            transition: .3s
+            +media-max(800px)
+                display: none
+        .mobile-menu-icon
+            display: none
+            +media-max(800px)
+                display: block
+            #close-mobile-menu
+                display: none
+.mobile-menu
+    +fullFlex(none,column,space-around)
+    text-align: center
