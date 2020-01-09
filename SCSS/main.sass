@@ -37,10 +37,11 @@ $purple: #5b04bf
                 display: block
             #close-mobile-menu
                 display: none
-.mobile-menu
-    +fullFlex(none,column,space-around)
-    text-align: center
+    .mobile-menu
+        +fullFlex(none,column,space-around)
+        text-align: center
 .top-section
+    z-index: 0
     .container
         +center(80%, 0 auto)
         padding: 160px 0

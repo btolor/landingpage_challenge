@@ -90,7 +90,7 @@
   display: none;
 }
 
-.mobile-menu {
+.header .mobile-menu {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -99,6 +99,10 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   text-align: center;
+}
+
+.top-section {
+  z-index: 0;
 }
 
 .top-section .container {
