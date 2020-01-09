@@ -4,6 +4,8 @@
 $gayathri: 'Gayathri', sans-serif
 $roboto: 'Roboto', sans-serif
 $purple: #5b04bf
+$hover: #0099ff
+$green: #33ff33
 
 .header
     +center(100%, 0 auto)
@@ -16,38 +18,81 @@ $purple: #5b04bf
         +fullFlex(flex,row,space-between)
         padding: 40px 0 20px        
         .logo
+            align-self: center
             flex-grow: 2
             a 
                 text-decoration: none
                 +text($gayathri,$purple,150%,700)
+                &:hover
+                    color: $hover
         .menu
             flex-grow: 1
             +fullFlex(flex,row,space-between)
             transition: .3s
+            align-items: center
             .menu-text 
                 text-decoration: none
                 +text($roboto,$purple,100%,600)
                 &:hover
-                    color: #0099ff
+                    color: $hover
             +media-max(800px)
                 display: none
+            .enroll
+                border: 2px solid $purple
+                color: white
+                padding: 14px 26px
+                border-radius: 25px
+                background: $green
+                transition: .03s
         .mobile-menu-icon
             display: none
             +media-max(800px)
                 display: block
+            a 
+                font-size: 125%
+                text-decoration: none
+                color: $purple
+                &:hover
+                    color: $hover
             #close-mobile-menu
                 display: none
     .mobile-menu
         +fullFlex(none,column,space-around)
         text-align: center
+        position: fixed
+        z-index: 1
+        +center(100%, 0 auto)
+        background: $purple
+        border-top: 1px solid white
+        a  
+            padding: 12px
+            text-transform: uppercase 
+            text-decoration: none
+            +text($roboto,white,100%,600)
+            border: 1px solid white
+            &:hover
+                color: $hover
+                border: 2px inset $hover 
+        #mobile-enroll
+            transition: .03s
+            &:hover
+                color: $green
+                border: 2px inset $green 
 .top-section
-    z-index: 0
+    height: 100vh
     .container
         +center(80%, 0 auto)
-        padding: 160px 0
+        padding-top: 25vh
         .content   
             +flex(flex,row)
             align-items: center
+            .info-content
+                h2 
+                    +text($gayathri,black,26px,700)
+                h4
+                    +text($roboto,black,100%,400)
+                a
+                    +text($roboto,black,100%,400)
         .build
             .email-clients
                 +center(60%,0 auto)
