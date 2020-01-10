@@ -1,4 +1,6 @@
 /* Import the mixins collection file... */
+/* Fonts... */
+/* Colors... */
 .header {
   width: 100%;
   margin: 0 auto;
@@ -449,9 +451,9 @@
 
 .freelance-advice .container p {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Martel", serif;
   color: white;
-  font-size: 125%;
+  font-size: 115%;
   font-weight: 300;
   font-style: italic;
   line-height: 1.5;
@@ -468,5 +470,320 @@
   .freelance-advice .container p {
     font-size: 100%;
   }
+}
+
+@media screen and (max-width: 425px) {
+  .freelance-advice .container p {
+    font-size: 90%;
+  }
+}
+
+.curriculum {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.curriculum .container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 7% 0 2%;
+}
+
+@media screen and (max-width: 425px) {
+  .curriculum .container {
+    padding-top: 15%;
+  }
+}
+
+.curriculum .container h1 {
+  font-family: "Gayathri", sans-serif;
+  color: black;
+  font-size: 210%;
+  font-weight: 800;
+  text-align: center;
+}
+
+@media screen and (max-width: 425px) {
+  .curriculum .container h1 {
+    font-size: 180%;
+  }
+}
+
+.curriculum .container .courses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 15vh 3% 0;
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses {
+    padding-top: 8vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .curriculum .container .courses {
+    padding-top: 5vh;
+  }
+}
+
+.curriculum .container .courses .course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 8%;
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses .course {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.curriculum .container .courses .course .info {
+  width: 45%;
+}
+
+@media screen and (max-width: 1024px) {
+  .curriculum .container .courses .course .info {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses .course .info {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.curriculum .container .courses .course .info h2 {
+  font-family: "Gayathri", sans-serif;
+  color: black;
+  font-size: 170%;
+  font-weight: 800;
+  padding-bottom: 1vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .curriculum .container .courses .course .info h2 {
+    font-size: 150%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses .course .info h2 {
+    font-size: 170%;
+    padding-bottom: 2vh;
+  }
+}
+
+.curriculum .container .courses .course .info p {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  font-size: 140%;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 1200px) {
+  .curriculum .container .courses .course .info p {
+    font-size: 120%;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses .course .info p {
+    font-size: 140%;
+    padding-bottom: 2vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .curriculum .container .courses .course .info p {
+    font-size: 120%;
+    line-height: 1.4;
+  }
+}
+
+.curriculum .container .courses .course .info .learn {
+  padding: 4% 0;
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses .course .info .learn {
+    padding: 0;
+  }
+}
+
+.curriculum .container .courses .course .info .learn a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  color: #5b04bf;
+  font-size: 100%;
+  font-weight: 400;
+}
+
+.curriculum .container .courses .course .info .learn a .fa {
+  font-size: 80%;
+}
+
+@media screen and (max-width: 600px) {
+  .curriculum .container .courses .course .info .learn a {
+    font-size: 86%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .curriculum .container .courses .course .info .learn a {
+    font-size: 75%;
+  }
+}
+
+.curriculum .container .courses .course .info .learn a:hover {
+  color: #0099ff;
+}
+
+.curriculum .container .courses .course .info-image {
+  width: 45%;
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses .course .info-image {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2% 0 8%;
+  }
+}
+
+.curriculum .container .courses .course .info-image img {
+  width: 80%;
+}
+
+@media screen and (max-width: 830px) {
+  .curriculum .container .courses .coding-courses, .curriculum .container .courses .asap-developers {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.email-marketing {
+  background-image: url("../images/email-marketing.png");
+  background-size: 100% 100%;
+}
+
+.email-marketing .marketing-bg {
+  height: 60vh;
+  background: rgba(91, 4, 191, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 830px) {
+  .email-marketing .marketing-bg {
+    height: 40vh;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .email-marketing .marketing-bg {
+    height: 30vh;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .email-marketing .marketing-bg {
+    height: 25vh;
+  }
+}
+
+.email-marketing .marketing-bg .container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.email-marketing .marketing-bg .container h1 {
+  text-align: center;
+  font-family: "Gayathri", sans-serif;
+  color: white;
+  font-size: 200%;
+  font-weight: 700;
+}
+
+.email-marketing .marketing-bg .container .questions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 3vh;
+}
+
+.email-marketing .marketing-bg .container .questions .question {
+  width: 32%;
+  text-align: center;
+  border-radius: 8px;
+  padding: 3% 2% 2%;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.email-marketing .marketing-bg .container .questions .question h2 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 100%;
+  font-weight: 600;
+  font-style: italic;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  border-bottom: 2px solid white;
+  line-height: 2.5;
+}
+
+.email-marketing .marketing-bg .container .questions .question p {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 100%;
+  font-weight: 400;
+  padding-top: 3vh;
+  line-height: 1.5;
 }
 /*# sourceMappingURL=main.css.map */

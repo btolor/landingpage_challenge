@@ -1,8 +1,11 @@
   
 /* Import the mixins collection file... */
 @import SASS-MIXINS
+/* Fonts... */
 $gayathri: 'Gayathri', sans-serif
 $roboto: 'Roboto', sans-serif
+$martel: 'Martel', serif
+/* Colors... */
 $purple: #5b04bf
 $hover: #0099ff
 $green: #33ff33
@@ -191,7 +194,7 @@ $green: #33ff33
             padding: 8% 0
         p 
             text-align: center
-            +text($roboto,white,125%,300)
+            +text($martel,white,115%,300)
             font-style: italic
             line-height: 1.5
             letter-spacing: 1.5px
@@ -199,3 +202,121 @@ $green: #33ff33
                 font-size: 100%
             +media-max(600px)
                 font-size: 100%
+            +media-max(425px)
+                font-size: 90%
+.curriculum
+    +center(100%, 0 auto)
+    .container  
+        +center(75%, 0 auto)
+        padding: 7% 0 2%
+        +media-max(425px)
+            padding-top: 15%
+        h1  
+            +text($gayathri,black,210%,800)
+            text-align: center
+            +media-max(425px)
+                font-size: 180%
+        .courses    
+            +fullFlex(flex,column,space-around)
+            padding: 15vh 3% 0
+            +media-max(830px)
+                padding-top: 8vh
+            +media-max(425px)
+                padding-top: 5vh
+            .course
+                +fullFlex(flex,row,space-between)
+                align-items: center
+                margin-bottom: 8%
+                +media-max(830px)
+                    flex-direction: column
+                .info
+                    width: 45%
+                    +media-max(1024px)
+                        width: 50%
+                    +media-max(830px)
+                        +center(100%, 0 auto)
+                        text-align: center
+                    h2  
+                        +text($gayathri,black,170%,800)
+                        padding-bottom: 1vh
+                        +media-max(1200px)
+                            font-size: 150%
+                        +media-max(830px)
+                            font-size: 170%
+                            padding-bottom: 2vh
+                    p  
+                        +text($roboto,black,140%,300)
+                        line-height: 1.7
+                        +media-max(1200px)
+                            font-size: 120%
+                        +media-max(830px)
+                            font-size: 140%
+                            padding-bottom: 2vh
+                        +media-max(425px)
+                            font-size: 120%
+                            line-height: 1.4
+                    .learn  
+                        padding: 4% 0
+                        +media-max(830px)
+                            padding: 0
+                        a 
+                            text-decoration: none
+                            +text($roboto,$purple,100%,400)
+                            .fa
+                                font-size: 80%
+                            +media-max(600px)
+                                font-size: 86%
+                            +media-max(425px)
+                                font-size: 75%
+                            &:hover
+                                color: $hover
+                .info-image
+                    width: 45%
+                    +media-max(830px)
+                        text-align: center
+                        +center(100%, 0 auto)
+                        padding: 2% 0 8%
+                    img     
+                        width: 80%
+            .coding-courses,.asap-developers
+                +media-max(830px)
+                    flex-direction: column-reverse
+.email-marketing
+    +bg-img("../images/email-marketing.png",100% 100%)
+    .marketing-bg   
+        height: 60vh
+        background: rgba(91, 4, 191,.8)   
+        +fullFlex(flex,column,center)
+        +media-max(830px)
+            height: 40vh  
+        +media-max(500px)
+            height: 30vh 
+        +media-max(425px)
+            height: 25vh   
+        .container  
+            +center(75%,0 auto)
+            h1 
+                text-align: center
+                +text($gayathri,white,200%,700)
+            .questions
+                +fullFlex(flex,row,space-between)
+                padding-top: 3vh
+                .question
+                    width: 32%
+                    text-align: center
+                    border-radius: 8px
+                    padding: 3% 2% 2%
+                    background: rgba(255,255,255,0.3)
+                    h2     
+                        +text($roboto,white,100%,600)
+                        font-style: italic
+                        +center(fit-content,0 auto)
+                        border-bottom: 2px solid white
+                        line-height: 2.5
+                    p 
+                        +text($roboto,white,100%,400)
+                        padding-top: 3vh
+                        line-height: 1.5
+
+
+
