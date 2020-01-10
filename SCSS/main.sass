@@ -14,7 +14,7 @@ $green: #33ff33
     transition: 0.3s
     z-index: 1
     #header-container
-        +center(80%, 0 auto)
+        +center(75%, 0 auto)
         +fullFlex(flex,row,space-between)
         padding: 40px 0 20px        
         .logo
@@ -35,18 +35,18 @@ $green: #33ff33
                 +text($roboto,$purple,100%,600)
                 &:hover
                     color: $hover
-            +media-max(800px)
+            +media-max(830px)
                 display: none
             .enroll
                 border: 2px solid $purple
                 color: white
-                padding: 14px 26px
-                border-radius: 25px
+                padding: 10px 26px
+                border-radius: 8px
                 background: $green
                 transition: .03s
         .mobile-menu-icon
             display: none
-            +media-max(800px)
+            +media-max(830px)
                 display: block
             a 
                 font-size: 125%
@@ -79,24 +79,86 @@ $green: #33ff33
                 color: $green
                 border: 2px inset $green 
 .top-section
-    height: 100vh
     .container
-        +center(80%, 0 auto)
+        +center(75%, 0 auto)
         padding-top: 25vh
+        +media-max(1024px)
+            padding-top: 20vh
         .content   
             +flex(flex,row)
             align-items: center
+            +media-max(830px)
+                flex-direction: column
             .info-content
+                width: 30%
+                +media-max(1400px)
+                    width: 50%
+                +media-max(830px)
+                    +center(95%, 0 auto)
+                    text-align: center
+                    padding-top: 8%
+                    padding-bottom: 10%
                 h2 
-                    +text($gayathri,black,26px,700)
+                    +text($gayathri,black,200%,700)
+                    +media-max(1024px)
+                        font-size: 180%
+                    +media-max(830px)
+                        font-size: 200%
                 h4
-                    +text($roboto,black,100%,400)
+                    +text($roboto,black,130%,300)
+                    padding: 4% 0 20%
+                    +media-max(1024px)
+                        font-size: 110%
+                        padding-bottom: 15%
+                    +media-max(830px)
+                        font-size: 130%
+                        +center(60%, 0 auto)
+                        padding: 8% 0 12%
                 a
-                    +text($roboto,black,100%,400)
+                    +text($roboto,white,100%,600)
+                    text-decoration: none
+                    border: 2px solid $purple
+                    padding: 14px 30%
+                    border-radius: 8px
+                    background: $hover
+                    transition: .03s
+                    &:hover
+                        color: $green
+                    +media-max(1024px)
+                        font-size: 95%
+                    +media-max(830px)
+                        font-size: 100%
+                        padding: 14px 25%
+            .image-content
+                padding-left: 15%
+                width: 70%
+                text-align: center
+                +media-max(1188px)
+                    width: 60%
+                    padding-left: 5%
+                +media-max(830px)
+                    width: 100%
+                    padding-left: 0
+                img 
+                    object-fit: contain
+                    +media-max(1044px)
+                        width: 100%
+                    +media-max(830px)
+                        height: 400px
         .build
+            padding: 6% 0 3%
+            text-align: center
+            h2 
+                +text($roboto,black,120%,400)
+                font-style: italic
+                +media-max(1040px)
+                    font-size: 100%
             .email-clients
+                padding: 5% 0 0
                 +center(60%,0 auto)
                 +fullFlex(flex,row,space-between)
+                +media-max(1040px)
+                    width: 75%
                 img 
-                    width: 8%
+                    width: 10%
             
