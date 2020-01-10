@@ -16,13 +16,17 @@ $green: #33ff33
     #header-container
         +center(75%, 0 auto)
         +fullFlex(flex,row,space-between)
-        padding: 40px 0 20px        
+        padding: 40px 0 20px 
+        +media-max(440px)
+            width: 85%       
         .logo
             align-self: center
             flex-grow: 2
             a 
                 text-decoration: none
                 +text($gayathri,$purple,150%,700)
+                +media-max(440px)
+                    font-size: 140%
                 &:hover
                     color: $hover
         .menu
@@ -49,9 +53,11 @@ $green: #33ff33
             +media-max(830px)
                 display: block
             a 
-                font-size: 125%
+                font-size: 150%
                 text-decoration: none
                 color: $purple
+                +media-max(440px)
+                    font-size: 135%
                 &:hover
                     color: $hover
             #close-mobile-menu
@@ -114,6 +120,8 @@ $green: #33ff33
                         font-size: 130%
                         +center(60%, 0 auto)
                         padding: 8% 0 12%
+                    +media-max(440px)
+                        padding-bottom: 15%
                 a
                     +text($roboto,white,100%,600)
                     text-decoration: none
@@ -148,17 +156,46 @@ $green: #33ff33
         .build
             padding: 6% 0 3%
             text-align: center
+            +media-max(440px)
+                padding-bottom: 8%
             h2 
                 +text($roboto,black,120%,400)
                 font-style: italic
                 +media-max(1040px)
                     font-size: 100%
+                +media-max(440px)
+                    font-size: 75%
+                    padding-bottom: 4%
             .email-clients
-                padding: 5% 0 0
+                padding: 5% 0 1%
                 +center(60%,0 auto)
                 +fullFlex(flex,row,space-between)
                 +media-max(1040px)
                     width: 75%
                 img 
                     width: 10%
-            
+                    +media-max(440px)
+                        width: 20%
+.freelance-advice
+    background: $purple
+    +center(100%, 0 auto)
+    .container
+        padding: 3.5% 0
+        +center(50%, 0 auto)
+        +media-max(1040px)
+            width: 75%
+            padding: 5% 0
+        +media-max(600px)
+            padding: 6% 0
+        +media-max(440px)
+            padding: 8% 0
+        p 
+            text-align: center
+            +text($roboto,white,125%,300)
+            font-style: italic
+            line-height: 1.5
+            letter-spacing: 1.5px
+            +media-max(1040px)
+                font-size: 100%
+            +media-max(600px)
+                font-size: 100%

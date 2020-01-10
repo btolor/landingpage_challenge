@@ -26,6 +26,12 @@
   padding: 40px 0 20px;
 }
 
+@media screen and (max-width: 440px) {
+  .header #header-container {
+    width: 85%;
+  }
+}
+
 .header #header-container .logo {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -41,6 +47,12 @@
   color: #5b04bf;
   font-size: 150%;
   font-weight: 700;
+}
+
+@media screen and (max-width: 440px) {
+  .header #header-container .logo a {
+    font-size: 140%;
+  }
 }
 
 .header #header-container .logo a:hover {
@@ -107,9 +119,15 @@
 }
 
 .header #header-container .mobile-menu-icon a {
-  font-size: 125%;
+  font-size: 150%;
   text-decoration: none;
   color: #5b04bf;
+}
+
+@media screen and (max-width: 440px) {
+  .header #header-container .mobile-menu-icon a {
+    font-size: 135%;
+  }
 }
 
 .header #header-container .mobile-menu-icon a:hover {
@@ -260,6 +278,12 @@
   }
 }
 
+@media screen and (max-width: 440px) {
+  .top-section .container .content .info-content h4 {
+    padding-bottom: 15%;
+  }
+}
+
 .top-section .container .content .info-content a {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -333,6 +357,12 @@
   text-align: center;
 }
 
+@media screen and (max-width: 440px) {
+  .top-section .container .build {
+    padding-bottom: 8%;
+  }
+}
+
 .top-section .container .build h2 {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -347,8 +377,15 @@
   }
 }
 
+@media screen and (max-width: 440px) {
+  .top-section .container .build h2 {
+    font-size: 75%;
+    padding-bottom: 4%;
+  }
+}
+
 .top-section .container .build .email-clients {
-  padding: 5% 0 0;
+  padding: 5% 0 1%;
   width: 60%;
   margin: 0 auto;
   display: -webkit-box;
@@ -371,5 +408,65 @@
 
 .top-section .container .build .email-clients img {
   width: 10%;
+}
+
+@media screen and (max-width: 440px) {
+  .top-section .container .build .email-clients img {
+    width: 20%;
+  }
+}
+
+.freelance-advice {
+  background: #5b04bf;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.freelance-advice .container {
+  padding: 3.5% 0;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1040px) {
+  .freelance-advice .container {
+    width: 75%;
+    padding: 5% 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .freelance-advice .container {
+    padding: 6% 0;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .freelance-advice .container {
+    padding: 8% 0;
+  }
+}
+
+.freelance-advice .container p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-size: 125%;
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+
+@media screen and (max-width: 1040px) {
+  .freelance-advice .container p {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .freelance-advice .container p {
+    font-size: 100%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
