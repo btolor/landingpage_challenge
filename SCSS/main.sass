@@ -281,42 +281,145 @@ $green: #33ff33
             .coding-courses,.asap-developers
                 +media-max(830px)
                     flex-direction: column-reverse
-.email-marketing
+.instructor
     +bg-img("../images/email-marketing.png",100% 100%)
-    .marketing-bg   
+    .instructor-bg   
         height: 60vh
         background: rgba(91, 4, 191,.8)   
         +fullFlex(flex,column,center)
         +media-max(830px)
-            height: 40vh  
-        +media-max(500px)
-            height: 30vh 
-        +media-max(425px)
-            height: 25vh   
+            height: fit-content   
         .container  
             +center(75%,0 auto)
+            padding-top: 4%
+            +media-max(830px)
+                padding-top: 8%
+            h1 
+                +text($gayathri,white,240%,700)
+                text-transform: capitalize
+                border-bottom: 2px solid white
+                line-height: .9
+                +center(max-content,0 auto)
+                +media-max(425px)
+                    font-size: 200%
+            .content    
+                +fullFlex(flex,row,center)
+                padding: 4% 3% 3% 3%
+                +media-max(1460px)
+                    padding: 4% 0 3% 
+                +media-max(830px)
+                    flex-direction: column
+                    padding: 8% 0 3% 
+                .info
+                    width: 45%
+                    align-self: center
+                    +media-max(1460px)
+                        width: 50%
+                .image-sec
+                    text-align: center
+                    +media-max(1224px)
+                        width: 35%
+                    +media-max(830px)
+                        width: 100%
+                    img 
+                        width: 200px
+                        border-radius: 50%
+                        -webkit-box-shadow: 0px 4px 15px 3px rgba(0,0,0,0.64)
+                        box-shadow: 0px 4px 15px 3px rgba(0,0,0,0.64)
+                        -moz-box-shadow: 0px 4px 15px 3px rgba(0,0,0,0.64)
+                        +media-max(1024px)
+                            width: 168px
+                        +media-max(830px)
+                            width: 200px
+                        +media-max(425px)
+                            width: 160px
+                    h3 
+                        +text($roboto,white,160%,700)
+                        padding: 3% 0
+                        +media-max(1024px)
+                            font-size: 145%
+                            padding: 6% 0 0
+                        +media-max(830px)
+                            font-size: 170%
+                            padding: 3% 0 0
+                        +media-max(425px)
+                            font-size: 155%
+                .info-sec
+                    +media-max(1224px)
+                        width: 65%
+                    +media-max(830px)
+                        width: 100%
+                        padding-top: 4%
+                    +media-max(425px)
+                        padding-bottom: 4%
+                    p   
+                        +text($roboto,white,130%,700)
+                        line-height: 1.6
+                        +media-max(1024px)
+                            font-size: 120%
+                            line-height: 1.5
+                        +media-max(900px)
+                            font-size: 115%
+                        +media-max(830px)
+                            font-size: 130%
+                        +media-max(425px)
+                            font-size: 115%
+.faq-info
+    padding: 5% 0
+    #section-title  
+        +center(max-content,0 auto)
+        +text($gayathri,black,240%,700)
+        border-bottom: 2px solid black
+        line-height: .9
+    .container
+        +center(75%, 0 auto)
+        padding: 3%
+        +fullFlex(flex,row,space-evenly)
+        +media-max(1300px)
+            padding: 0
+        .section
+            width: 45%
+            padding: 1% 3%
+            background: $hover
+            box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.75)
+            -webkit-box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.75)
+            -moz-box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.75)
+            +media-max(1300px)
+                padding: 1% 2%
             h1 
                 text-align: center
-                +text($gayathri,white,200%,700)
-            .questions
-                +fullFlex(flex,row,space-between)
-                padding-top: 3vh
-                .question
-                    width: 32%
-                    text-align: center
-                    border-radius: 8px
-                    padding: 3% 2% 2%
-                    background: rgba(255,255,255,0.3)
-                    h2     
-                        +text($roboto,white,100%,600)
+                +text($roboto,white,130%,800)
+                font-style: italic
+                padding: 6% 0 3%
+                border-bottom: 3px solid white
+                margin-bottom: 5%
+                letter-spacing: 2px
+            .question
+                padding: 3% 0
+                h2 
+                    +text($roboto,white,120%,700)
+                p
+                    +text($roboto,white,110%,300)
+                    padding: 2%
+                    font-style: italic
+                    line-height: 1.6
+            .courses
+                padding-bottom: 2%
+                .course
+                    +flex(flex,row)
+                    padding: .5% 0
+                    align-items: baseline
+                    i 
+                        margin-right: 4%
+                        color: white
+                        font-size: 115%
+                    h4 
+                        +text($roboto,white,110%,500)
+                        padding: 1% 0
+                        letter-spacing: 1px
                         font-style: italic
-                        +center(fit-content,0 auto)
-                        border-bottom: 2px solid white
-                        line-height: 2.5
-                    p 
-                        +text($roboto,white,100%,400)
-                        padding-top: 3vh
-                        line-height: 1.5
+                    
+
 
 
 
