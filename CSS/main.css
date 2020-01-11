@@ -368,7 +368,7 @@
 .top-section .container .build h2 {
   font-family: "Roboto", sans-serif;
   color: black;
-  font-size: 120%;
+  font-size: 115%;
   font-weight: 400;
   font-style: italic;
 }
@@ -387,7 +387,7 @@
 }
 
 .top-section .container .build .email-clients {
-  padding: 5% 0 1%;
+  padding: 3% 0 1%;
   width: 60%;
   margin: 0 auto;
   display: -webkit-box;
@@ -397,9 +397,8 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media screen and (max-width: 1040px) {
@@ -409,7 +408,7 @@
 }
 
 .top-section .container .build .email-clients img {
-  width: 10%;
+  width: 8%;
 }
 
 @media screen and (max-width: 440px) {
@@ -951,7 +950,24 @@
 
 @media screen and (max-width: 1300px) {
   .faq-info .container {
-    padding: 0;
+    padding: 36px 0 3%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .faq-info .container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .faq-info .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -967,6 +983,18 @@
 @media screen and (max-width: 1300px) {
   .faq-info .container .section {
     padding: 1% 2%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .faq-info .container .section {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .faq-info .container .section {
+    width: 100%;
   }
 }
 
@@ -994,6 +1022,18 @@
   font-weight: 700;
 }
 
+@media screen and (max-width: 1024px) {
+  .faq-info .container .section .question h2 {
+    font-size: 110%;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .faq-info .container .section .question h2 {
+    font-size: 100%;
+  }
+}
+
 .faq-info .container .section .question p {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -1004,8 +1044,20 @@
   line-height: 1.6;
 }
 
+@media screen and (max-width: 1150px) {
+  .faq-info .container .section .question p {
+    font-size: 100%;
+  }
+}
+
 .faq-info .container .section .courses {
   padding-bottom: 2%;
+}
+
+@media screen and (max-width: 1200px) {
+  .faq-info .container .section .courses {
+    padding-top: 2%;
+  }
 }
 
 .faq-info .container .section .courses .course {
@@ -1017,9 +1069,9 @@
       -ms-flex-direction: row;
           flex-direction: row;
   padding: .5% 0;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .faq-info .container .section .courses .course i {
@@ -1036,5 +1088,17 @@
   padding: 1% 0;
   letter-spacing: 1px;
   font-style: italic;
+}
+
+@media screen and (max-width: 1150px) {
+  .faq-info .container .section .courses .course h4 {
+    font-size: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .faq-info .container .section .courses .course h4 {
+    font-size: 98%;
+  }
 }
 /*# sourceMappingURL=main.css.map */
