@@ -17,36 +17,42 @@
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 
-<body>
+<body id="body">
     <!-- start of header -->
     <header class="header">
         <!-- start of container -->
         <div class="container" id="header-container">
             <!-- start of logo -->
             <div class="logo">
-                <a id="logo-text" href="#">HTML Em@il Developer</a>
+                <a id="logo-text" href="#body">
+                <img id="purple" src="images/purple-email-logo.png" alt="">
+                <img class="scrolled" id="green" src="images/green-email-logo.png" alt="">
+                HTML Em@il Developer
+            </a>
             </div>
             <!-- end of logo -->
             <!-- start of menu -->
             <div class="menu">
-                <a class="menu-text" href="#">Courses</a>
-                <a class="menu-text" href="codingphase.com">CodingPhase.com</a>
-                <a class="menu-text enroll" href="#">Enroll Now!</a>
+                <a class="menu-text" href="#curriculum">Courses</a>
+                <a class="menu-text" href="#cost">Pricing</a>
+                <a class="menu-text" href="https://codingphase.com/" target="_blank">CodingPhase.com</a>
+                <a class="menu-text enroll" href="https://tinyurl.com/w6uj5vj" target="_blank">Enroll Now!</a>
             </div>
             <!-- end of menu -->
             <!-- start of mobile-menu-icon -->
             <div class="mobile-menu-icon">
-                <a href="#" id="open-mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
-                <a href="#" id="close-mobile-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
+                <a href="#/" id="open-mobile-menu"><i class="fa fa-bars" aria-hidden="true"></i></a>
+                <a href="#/" id="close-mobile-menu"><i class="fa fa-times" aria-hidden="true"></i></a>
             </div>
             <!-- end of mobile-menu-icon -->
         </div>
         <!-- end of container -->
         <!-- start of mobile-menu -->
         <div class="mobile-menu" id="mobile-menu">
-            <a href="#">courses</a>
-            <a href="codingphase.com">codingphase.com</a>
-            <a href="#" id="mobile-enroll">Enroll Now!</a>
+            <a href="#curriculum">courses</a>
+            <a href="#cost">Pricing</a>
+            <a href="https://codingphase.com/" target="_blank">codingphase.com</a>
+            <a id="mobile-e-btn" href="https://tinyurl.com/w6uj5vj" id="mobile-enroll" target="_blank">Enroll Now!</a>
         </div>
         <!-- end of mobile-menu -->
     </header>
@@ -63,7 +69,7 @@
                 <div class="info-content">
                     <h2>Become A Job Ready Email Developer</h2>
                     <h4>Get Everything You Need To Get Hired As Email Developer</h4>
-                    <a href="#">SIGN UP NOW</a>
+                    <a href="https://tinyurl.com/w6uj5vj">SIGN UP NOW</a>
                 </div>
                 <!-- end of info-content -->
                 <!-- start of image-content -->
@@ -112,7 +118,7 @@
     <!-- end of freelance-advice -->
 
     <!-- start of curriculum -->
-    <div class="curriculum">
+    <div class="curriculum" id="curriculum">
         <!-- start of container -->
         <div class="container">
             <h1>What You Get With This Course?</h1>
@@ -132,7 +138,7 @@
                         </p>
                         <!-- start of learn -->
                         <div class="learn">
-                            <a href="#">Learn About Coding Coureses <i class="fa fa-chevron-right"
+                            <a href="https://student.codingphase.com/courses" target="_blank">Learn About Coding Coureses <i class="fa fa-chevron-right"
                                     aria-hidden="true"></i></a>
                         </div>
                         <!-- end of learn -->
@@ -157,7 +163,7 @@
                     <!-- end of info-image -->
                     <!-- start of info -->
                     <div class="info">
-                        <h2>Exclusive Courses</h2>
+                        <h2 id="exclusive">Exclusive Courses</h2 id="coding">
                         <p>
                             The exclusive courses include Design Software For Email Developers,
                             Email Developer Freelancer Guide, Job Ready Email Developer (Resume
@@ -166,7 +172,7 @@
                         </p>
                         <!-- start of learn -->
                         <div class="learn">
-                            <a href="#">Learn About Exclusive Coureses <i class="fa fa-chevron-right"
+                            <a href="https://student.codingphase.com/p/html-email-developer-career-bundle" target="_blank" id="learn-exclusive">Learn About Exclusive Coureses <i class="fa fa-chevron-right"
                                     aria-hidden="true"></i></a>
                         </div>
                         <!-- end of learn -->
@@ -189,7 +195,7 @@
                         </p>
                         <!-- start of learn -->
                         <div class="learn">
-                            <a href="#">Learn About ASAP Developers <i class="fa fa-chevron-right"
+                            <a href="https://tinyurl.com/rlwq3p8" target="_blank">Learn About ASAP Developers <i class="fa fa-chevron-right"
                                     aria-hidden="true"></i></a>
                         </div>
                         <!-- end of learn -->
@@ -255,7 +261,12 @@
             <div class="container">
                 <!-- start of faq-questions -->
                 <div class="faq-questions section">
-                    <h1><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ's</h1>
+                    <!-- start of title-container -->
+                    <div class="title-container">
+                        <h1><i class="fa fa-question-circle" aria-hidden="true"></i> FAQ's</h1>
+                    </div>
+                    <!-- end of title-container -->
+                    
                     <!-- start of question q1 -->
                     <div class="question q1">
                         <h2>When does the course start and finish?</h2>
@@ -285,9 +296,13 @@
                     <!-- end of question q3 -->
                 </div>
                 <!-- end of faq-questions -->
-                <!-- start of price -->
-                <div class="price  section">
-                    <h1><i class="fa fa-leanpub" aria-hidden="true"></i> Course Curriculum</h1>
+                <!-- start of include -->
+                <div class="include  section">
+                    <!-- start of title-container -->
+                    <div class="title-container">
+                        <h1><i class="fa fa-leanpub" aria-hidden="true"></i> Course Curriculum</h1>
+                    </div>
+                    <!-- end of title-container -->
                     <!-- start of courses -->
                     <div class="courses">
                         <!-- start of course -->
@@ -365,11 +380,42 @@
                     </div>
                     <!-- end of courses -->
                 </div>
-                <!-- end of price -->
+                <!-- end of includee -->
             </div>
             <!-- end of container -->
+            <!-- start of price-container -->
+            <div class="price-container" id="cost">
+                <!-- start of old price -->
+                <div class="price old">
+                    <h3>Original Price: <span>$985</span></h3>
+                </div>
+                <!-- end of price -->
+                <!-- start of new price -->
+                <div class="new price">
+                    <h3>Get It Now: <span>$500</span></h3>
+                </div>
+                <!-- end of price -->
+                <!-- start of enroll -->
+                <div class="bottom-enroll">
+                    <a href="https://tinyurl.com/w6uj5vj" target="_blank">Enroll Now</a>
+                </div>
+                <!-- end of enroll -->
+            </div>
+            <!-- end of price-container -->
     </div>
     <!-- end of faq-info -->
+
+    <!-- start of footer -->
+    <footer>
+        <!-- start of container -->
+        <div class="container">
+            <h6>© codingphase</h6>  
+            <h6>Terms of Use</h6>
+            <h6>Privacy Policy</h6>
+        </div>
+        <!-- end of container -->
+    </footer>
+    <!-- end of footer -->
 
 
 

@@ -6,16 +6,19 @@ $gayathri: 'Gayathri', sans-serif
 $roboto: 'Roboto', sans-serif
 $martel: 'Martel', serif
 /* Colors... */
-$purple: #5b04bf
-$hover: #0099ff
-$green: #33ff33
-
+$light-blue: #5680e9
+$dark-blue: #2c2798
+$hover:  #60b4a1         
+$hover2: #edd38c
+$text-color: #606365
+//#0099ff
 .header
     +center(100%, 0 auto)
     transition: .3s
     position: fixed
     transition: 0.3s
     z-index: 1
+    top: 0
     #header-container
         +center(75%, 0 auto)
         +fullFlex(flex,row,space-between)
@@ -23,15 +26,29 @@ $green: #33ff33
         +media-max(440px)
             width: 85%       
         .logo
-            align-self: center
+            align-items: center
             flex-grow: 2
+            +flex(flex,row)
+            
             a 
                 text-decoration: none
-                +text($gayathri,$purple,150%,700)
+                +text($gayathri,$dark-blue,150%,700)
+                align-self: center
+                +flex(flex,row)
                 +media-max(440px)
                     font-size: 140%
+                +media-max(360px)
+                    font-size: 115%
                 &:hover
                     color: $hover
+                .scrolled
+                    display: none
+                img 
+                    width: 45px
+                    margin-bottom: 8px
+                    padding-right: 8px 
+                    +media-max(360px)
+                        width: 36px
         .menu
             flex-grow: 1
             +fullFlex(flex,row,space-between)
@@ -39,28 +56,34 @@ $green: #33ff33
             align-items: center
             .menu-text 
                 text-decoration: none
-                +text($roboto,$purple,100%,600)
+                +text($roboto,$dark-blue,100%,600)
                 &:hover
                     color: $hover
-            +media-max(830px)
+            +media-max(1024px)
                 display: none
             .enroll
-                border: 2px solid $purple
-                color: white
+                border: 2px solid $dark-blue
+                color: $dark-blue
                 padding: 10px 26px
                 border-radius: 8px
-                background: $green
+                background: transparent 
                 transition: .03s
+                &:hover
+                    background: $dark-blue
+                    border: 2px solid $hover
+                    color: $hover
         .mobile-menu-icon
             display: none
-            +media-max(830px)
+            +media-max(1024px)
                 display: block
             a 
                 font-size: 150%
                 text-decoration: none
-                color: $purple
+                color: $dark-blue
                 +media-max(440px)
                     font-size: 135%
+                +media-max(360px)
+                    font-size: 115%
                 &:hover
                     color: $hover
             #close-mobile-menu
@@ -71,7 +94,7 @@ $green: #33ff33
         position: fixed
         z-index: 1
         +center(100%, 0 auto)
-        background: $purple
+        background: $dark-blue
         border-top: 1px solid white
         a  
             padding: 12px
@@ -80,13 +103,14 @@ $green: #33ff33
             +text($roboto,white,100%,600)
             border: 1px solid white
             &:hover
-                color: $hover
-                border: 2px inset $hover 
+                color: $hover2
+                border: 2px inset $hover2
+                background: $light-blue
         #mobile-enroll
             transition: .03s
             &:hover
-                color: $green
-                border: 2px inset $green 
+                color: $hover2
+                border: 2px inset $hover2 
 .top-section
     .container
         +center(75%, 0 auto)
@@ -96,25 +120,31 @@ $green: #33ff33
         .content   
             +flex(flex,row)
             align-items: center
+            justify-content: space-between
+            padding: 0 3%
+            +media-max(1080px)
+                padding: 0
             +media-max(830px)
                 flex-direction: column
             .info-content
-                width: 30%
+                width: 40%
                 +media-max(1400px)
-                    width: 50%
+                    width: 35%
+                +media-max(960px)
+                    width: 40%
                 +media-max(830px)
                     +center(95%, 0 auto)
                     text-align: center
                     padding-top: 8%
                     padding-bottom: 10%
                 h2 
-                    +text($gayathri,black,200%,700)
+                    +text($gayathri,$dark-blue,200%,700)
                     +media-max(1024px)
                         font-size: 180%
                     +media-max(830px)
                         font-size: 200%
                 h4
-                    +text($roboto,black,130%,300)
+                    +text($roboto,$text-color,130%,300)
                     padding: 4% 0 20%
                     +media-max(1024px)
                         font-size: 110%
@@ -128,41 +158,38 @@ $green: #33ff33
                 a
                     +text($roboto,white,100%,600)
                     text-decoration: none
-                    border: 2px solid $purple
+                    border: 2px solid $dark-blue
                     padding: 14px 30%
                     border-radius: 8px
-                    background: $hover
+                    background: $light-blue
                     transition: .03s
                     &:hover
-                        color: $green
+                        color: $hover2
+                        background: $hover
                     +media-max(1024px)
                         font-size: 95%
                     +media-max(830px)
                         font-size: 100%
                         padding: 14px 25%
             .image-content
-                padding-left: 15%
-                width: 70%
-                text-align: center
+                width: 60%
+                text-align: right
                 +media-max(1188px)
                     width: 60%
                     padding-left: 5%
                 +media-max(830px)
                     width: 100%
                     padding-left: 0
-                img 
-                    object-fit: contain
-                    +media-max(1044px)
-                        width: 100%
-                    +media-max(830px)
-                        height: 400px
+                iframe 
+                    +media-max(1240px)
+                        width: 100% !important
         .build
             padding: 6% 0 3%
             text-align: center
             +media-max(440px)
                 padding-bottom: 8%
             h2 
-                +text($roboto,black,115%,400)
+                +text($roboto,$text-color,115%,400)
                 font-style: italic
                 +media-max(1040px)
                     font-size: 100%
@@ -180,7 +207,7 @@ $green: #33ff33
                     +media-max(440px)
                         width: 20%
 .freelance-advice
-    background: $purple
+    background: $dark-blue
     +center(100%, 0 auto)
     .container
         padding: 3.5% 0
@@ -191,13 +218,15 @@ $green: #33ff33
         +media-max(600px)
             padding: 6% 0
         +media-max(440px)
-            padding: 8% 0
+            padding: 8% 0 4%
         p 
             text-align: center
             +text($martel,white,115%,300)
             font-style: italic
             line-height: 1.5
             letter-spacing: 1.5px
+            border-bottom: 1px solid $hover2
+            padding-bottom: 3%
             +media-max(1040px)
                 font-size: 100%
             +media-max(600px)
@@ -212,8 +241,9 @@ $green: #33ff33
         +media-max(425px)
             padding-top: 15%
         h1  
-            +text($gayathri,black,210%,800)
-            text-align: center
+            +text($gayathri,$dark-blue,210%,800)
+            +center(max-content, 0 auto)
+            border-bottom: 2px solid $hover2
             +media-max(425px)
                 font-size: 180%
         .courses    
@@ -237,15 +267,17 @@ $green: #33ff33
                         +center(100%, 0 auto)
                         text-align: center
                     h2  
-                        +text($gayathri,black,170%,800)
+                        +text($gayathri,$hover,170%,800)
                         padding-bottom: 1vh
                         +media-max(1200px)
                             font-size: 150%
                         +media-max(830px)
                             font-size: 170%
                             padding-bottom: 2vh
+                    #exclusive
+                        color: $hover2
                     p  
-                        +text($roboto,black,140%,300)
+                        +text($roboto,$text-color,140%,300)
                         line-height: 1.7
                         +media-max(1200px)
                             font-size: 120%
@@ -261,7 +293,7 @@ $green: #33ff33
                             padding: 0
                         a 
                             text-decoration: none
-                            +text($roboto,$purple,100%,400)
+                            +text($roboto,$dark-blue,100%,400)
                             .fa
                                 font-size: 80%
                             +media-max(600px)
@@ -269,7 +301,7 @@ $green: #33ff33
                             +media-max(425px)
                                 font-size: 75%
                             &:hover
-                                color: $hover
+                                color: $light-blue
                 .info-image
                     width: 45%
                     +media-max(830px)
@@ -285,7 +317,7 @@ $green: #33ff33
     +bg-img("../images/email-marketing.png",100% 100%)
     .instructor-bg   
         height: 60vh
-        background: rgba(91, 4, 191,.8)   
+        background: rgba(44, 39, 152,.8)   
         +fullFlex(flex,column,center)
         +media-max(830px)
             height: fit-content   
@@ -297,7 +329,7 @@ $green: #33ff33
             h1 
                 +text($gayathri,white,240%,700)
                 text-transform: capitalize
-                border-bottom: 2px solid white
+                border-bottom: 2px solid $hover2
                 line-height: .9
                 +center(max-content,0 auto)
                 +media-max(425px)
@@ -368,8 +400,8 @@ $green: #33ff33
     padding: 5% 0
     #section-title  
         +center(max-content,0 auto)
-        +text($gayathri,black,240%,700)
-        border-bottom: 2px solid black
+        +text($gayathri,$dark-blue,240%,700)
+        border-bottom: 2px solid $hover2
         line-height: .9
     .container
         +center(75%, 0 auto)
@@ -383,34 +415,47 @@ $green: #33ff33
             flex-direction: column
         .section
             width: 45%
-            padding: 1% 3%
-            background: $hover
+            border: 1px solid $text-color
+            padding-bottom: 1%
+            background: $light-blue
             box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.75)
             -webkit-box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.75)
             -moz-box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.75)
             +media-max(1300px)
-                padding: 1% 2%
+                padding: 1% 0
             +media-max(1100px)
                 width: 48%
             +media-max(960px)
-                width: 100%
+                +center(75%,0 auto)
+                padding: 1% 0
                 margin-bottom: 7%
-            h1 
-                text-align: center
-                +text($roboto,white,130%,800)
-                font-style: italic
-                padding: 6% 0 3%
-                border-bottom: 3px solid white
-                margin-bottom: 5%
-                letter-spacing: 2px
+            +media-max(650px)
+                width: 100%
+            .title-container
+                width: 100%
+                background: rgba(96, 180, 161,.8)
+                h1 
+                    text-align: center
+                    +text($roboto,white,130%,800)
+                    font-style: italic
+                    padding: 6% 0 3%
+                    border-bottom: 1px solid $dark-blue
+                    margin-bottom: 5%
+                    letter-spacing: 2px
             .question
-                padding: 3% 0
+                padding: 3% 
+                +media-max(1300px)
+                    padding: 3% 3%
+                +media-max(960px)
+                    padding: 3% 4%
                 h2 
-                    +text($roboto,white,120%,700)
+                    +text($roboto,$hover2,120%,700)
                     +media-max(1024px)
                         font-size: 110%
                     +media-max(960px)
-                        font-size: 100%
+                        font-size: 115%
+                    +media-max(425px)
+                        font-size: 110%
                 p
                     +text($roboto,white,110%,300)
                     padding: 2%
@@ -418,18 +463,26 @@ $green: #33ff33
                     line-height: 1.6
                     +media-max(1150px)
                         font-size: 100%
+                    +media-max(960px)
+                        font-size: 110%
+                    +media-max(425px)
+                        font-size: 100%
             .courses
-                padding-bottom: 2%
+                padding: 0 3% 2% 
                 +media-max(1200px)
                     padding-top: 2%
+                +media-max(960px)
+                    padding: 2% 4% 2% 
                 .course
                     +flex(flex,row)
                     padding: .5% 0
                     align-items: center
                     i 
                         margin-right: 4%
-                        color: white
+                        color: $hover2
                         font-size: 115%
+                        +media-max(425px)
+                            font-size: 95%
                     h4 
                         +text($roboto,white,110%,500)
                         padding: 1% 0
@@ -439,8 +492,53 @@ $green: #33ff33
                             font-size: 100%
                         +media-max(1024px)
                             font-size: 98%
-                    
-
-
+                        +media-max(960px)
+                            font-size: 110%
+                        +media-max(425px)
+                            font-size: 95%
+    .price-container
+        padding-top: 1.5%
+        +center(75%, 0 auto)
+        +fullFlex(flex,column,center)
+        text-align: center
+        .price
+            padding: 1% 0
+            h3 
+                +text($roboto,black,160%,700)
+        .old   
+            span
+                opacity: .5
+                color: $text-color
+                text-decoration: line-through
+                text-decoration-color: black
+        .new
+            padding-bottom: 4%
+            span
+                color: green
+        .bottom-enroll
+            padding-top: 2%
+            a   
+                background: $light-blue
+                text-decoration: none
+                +text($roboto,white,130%,500)
+                padding: 1.3% 6%
+                border-radius: 8px
+                border: 2px solid $dark-blue
+                transition: .3s
+                &:hover
+                    color: $hover2
+                    background: $hover
+footer 
+    background: $dark-blue
+    .container
+        padding: 2% 0 1.5%
+        +center(75%, 0 auto)
+        +fullFlex(flex,row,center)   
+        +text($roboto,white,95%,400) 
+        text-align: center 
+        +media-max(450px)
+            flex-direction: column
+        h6 
+            margin: 0 5px         
 
 
