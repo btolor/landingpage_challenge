@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+        $('html,body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 800);
+    });
     // Mobile-Device-Nav-Menu
     $("#open-mobile-menu").click(function () {
         $("#open-mobile-menu").css("display", "none");
@@ -6,6 +13,18 @@ $(document).ready(function () {
         $("#mobile-menu").css("display", "flex").hide().slideDown(300);
     });
     $("#close-mobile-menu").click(function () {
+        $("#open-mobile-menu").css("display", "block");
+        $("#close-mobile-menu").css("display", "none");
+        $("#mobile-menu").slideUp();
+    });
+
+    $(".mobile-menu").children().click(function () {
+        $("#open-mobile-menu").css("display", "block");
+        $("#close-mobile-menu").css("display", "none");
+        $("#mobile-menu").slideUp();
+    });
+
+    $("#logo-text").click(function () {
         $("#open-mobile-menu").css("display", "block");
         $("#close-mobile-menu").css("display", "none");
         $("#mobile-menu").slideUp();
@@ -155,11 +174,6 @@ $(document).ready(function () {
         }
     });
 
-    $(document).on('click', 'a[href^="#"]', function (event) {
-        event.preventDefault();
-        $('html,body').animate({
-            scrollTop: $($.attr(this, 'href')).offset().top
-        }, 800);
-    });
+
 
 });
